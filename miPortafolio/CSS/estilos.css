@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth ;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: hsl(11, 28%, 92%);
+     
+
+}  
+/* encabezado */
+header{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(22, 22, 22);
+    color: rgb(233, 244, 240);
+}
+
+header h1{
+    margin: 0;
+    font-size: 48px;
+
+}
+
+header p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Navegacion */
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a{
+    color: rgb(28, 28, 30);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+nav a:hover {
+    text-decoration: underline ;
+}
+
+/* main */
+
+main{
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: grey; 
+}
+
+/* Secciones */
+section {
+    padding: 60px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Seccion de inicio */
+.seccion-inicio{
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
