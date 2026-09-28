@@ -10,7 +10,8 @@
     <header>
         <!-- aqui esta el encabezado -->
         <h1>Mi portafolio</h1>
-        <p>Bienvenido a mi sitio web personal </p>
+        <p id="mensaje">Bienvenido a mi sitio web personal </p>
+        <button id="btn -mensaje">Cambiar mensaje</button>
     </header>
     <!-- aqui comienza la navegacion -->
      <nav>
@@ -70,25 +71,29 @@
                 <li>packet tracer</li>
                 <li>MySQL</li>
             </ul>
+            <button id="btn-color">Cambiar color</button>
+            <button id="btn-letra">Cambiar letra</button>
           </section>
 
           <!-- Seccion contacto -->
 
           <section>
             <h2>Contactame</h2>
+            <form id="formulario">  
             <form action="">
-                <div>
+                <div> 
                     <label for="">Nombre</label>
-                    <input type="text"> 
+                    <input type="text" id="nombre"> 
                 </div>
                   <div>
                     <label for="">correo</label>
-                    <input type="text"> 
+                    <input type="text" id="correo"> 
                 </div>
                   <div>
                     <label for="">mensaje</label>
-                    <textarea rows  ="5"> </textarea>   
+                    <textarea rows  ="5 "> </textarea>   
                 </div>
+                <button type="submit">Enviar mensaje</button>
             </form>
           </section>
 
@@ -97,5 +102,6 @@
         <p>2026 Mi portafolio web</p>
         <p>Practica de programacion todos los derechos reservados </p>
       </footer>
+      <script src="./js/main.js"></script>   
 </body>
 </html>
