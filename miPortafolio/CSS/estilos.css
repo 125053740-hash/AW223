@@ -250,11 +250,136 @@ footer p{
     margin: 5px ;
 }
 
-/* Diseño responsive */
+/* Administracion */
+.admin-home{
+    justify-content: flex-start;
+    padding: 14px max(20px, calc((100% - 1100px) / 2));
+}
 
+.admin-home a{
+    display: inline-flex;
+    align-items: center;
+    color: rgb(28, 28, 30);
+}
+
+.admin-home svg{
+    width: 22px;
+    height: 22px;
+}
+
+main.admin-main{
+    max-width: 1100px;
+    padding: 40px 20px;
+    background-color: transparent;
+}
+
+.mensajes-card{
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+}
+
+.mensajes-card h2{
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.tabla-contenedor{
+    overflow-x: auto;
+}
+
+.tabla-mensajes{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-mensajes th,
+.tabla-mensajes td{
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-mensajes th{
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+.tabla-mensajes tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.tabla-opciones{
+    white-space: nowrap;
+}
+
+.tabla-opciones a,
+.icono-borrar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 6px;
+    border-radius: 5px;
+}
+
+.tabla-opciones a{
+    color: rgb(22, 22, 22);
+    background-color: #e8e8e8;
+}
+
+.tabla-opciones a:hover{
+    background-color: #d5d5d5;
+}
+
+.icono-borrar{
+    color: #a32626;
+    background-color: #f6e5e5;
+}
+
+.tabla-opciones svg{
+    width: 18px;
+    height: 18px;
+}
+
+.admin-edit-nav{
+    flex-direction: row;
+    align-items: center;
+}
+
+.admin-edit-nav svg{
+    width: 24px;
+    height: 24px;
+}
+
+.formulario-editar{
+    max-width: 600px;
+}
+
+.formulario-editar button{
+    width: 100%;
+}
+
+.formulario-editar button:hover{
+    background-color: #333;
+    color: white;
+}
+
+/* Diseño responsive */
 @media (max-width: 600px){
     header h1{
         font-size: 32px;
+    }
+
+    .mensajes-card{
+        padding: 20px 14px;
+    }
+
+    .admin-edit-nav{
+        justify-content: center;
     }
 }
 
