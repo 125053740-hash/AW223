@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,30 +77,41 @@
           </section>
 
           <!-- Seccion contacto -->
+           
+<section class="seccion-admin" id="contacto">
+            <div class="tarjeta-formulario-admin">
+                <h2>Contacto</h2>
+                <form action="guardar_mensaje.php" method="POST">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="txtnombre" placeholder="Escribe tu nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="txtcorreo" placeholder="Escribe tu correo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje-contacto">Mensaje</label>
+                        <textarea id="mensaje-contacto" name="txtmensaje" rows="5" required></textarea>
+                    </div>
+                     
+                    <button type="submit">Enviar</button>
+                </form>
+                <?php if (isset($_GET['estado']) && $_GET['estado'] === 'guardado'): ?>
+                    <p role="status">Tu mensaje se guardó correctamente.</p>
+                <?php elseif (isset($_GET['estado']) && $_GET['estado'] === 'error'): ?>
+                    <p role="alert">No se pudo guardar tu mensaje. Inténtalo de nuevo más tarde.</p>
+                <?php endif; ?>
 
-          <section>
-            <h2>Contactame</h2>
-            <form id="formulario">
-                <div> 
-                    <label for="">Nombre</label>
-                    <input type="text" id="nombre"> 
-                </div>
-                  <div>
-                    <label for="">correo</label>
-                    <input type="text" id="correo"> 
-                </div>
-                  <div>
-                    <label for="">mensaje</label>
-                    <textarea rows  ="5 "> </textarea>   
-                </div>
-                <button type="submit">Enviar mensaje</button>
-          </section>
+            </div>
+        </section>
+          
 
       </main>
       <footer>
         <p>2026 Mi portafolio web</p>
         <p>Practica de programacion todos los derechos reservados </p>
       </footer>
-      <script src="./js/main.js"></script>   
+      <script src="./JS/main.js"></script>   
 </body>
 </html>

@@ -1,4 +1,4 @@
-const btnMensaje = document.getElementById('btn-mensaje');
+/* const btnMensaje = document.getElementById('btn-mensaje');
 const mensaje = document.getElementById('mensaje');
 
 btnMensaje.addEventListener('click', function() {
@@ -40,4 +40,4 @@ formulario.addEventListener('submit', function(e) {
     }
 
     alert('Formulario enviado correctamente');
-});   
+});    */
