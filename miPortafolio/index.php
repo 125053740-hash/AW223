@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./CSS/estilos.css">
 </head>
 <body>  
+    
     <header>
         <!-- aqui esta el encabezado -->
         <h1>Mi portafolio</h1>
@@ -75,6 +76,7 @@
             <button id="btn-color">Cambiar color</button>
             <button id="btn-letra">Cambiar letra</button>
           </section>
+          
 
           <!-- Seccion contacto -->
            
@@ -113,5 +115,17 @@
         <p>Practica de programacion todos los derechos reservados </p>
       </footer>
       <script src="./JS/main.js"></script>   
+      <?php if (isset($_GET['estado'])): ?>
+    
+    <script>
+        <?php if ($_GET['estado'] === 'actualizado'): ?>
+            alert("El mensaje ha sido actualizado correctamente.");
+        <?php elseif ($_GET['estado'] === 'eliminado'): ?>
+            alert("El mensaje ha sido eliminado con éxito.");
+        <?php endif; ?>
+    </script>
+
+<?php endif; ?>
+
 </body>
 </html>
