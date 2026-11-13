@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar gasto</title>
+</head>
+<body>
+    <main>
+        <h1>Registrar un nuevo gasto</h1>
+        <p>Completa el formulario para guardar un gasto.</p>
+
+        <p id="resultado" role="status" aria-live="polite"></p>
+
+        <form action="guardar_gasto.php" method="POST" accept-charset="UTF-8">
+            <div>
+                <label for="concepto">Concepto</label>
+                <input type="text" id="concepto" name="txtconcepto" maxlength="50" required>
+            </div>
+            <div>
+                <label for="monto">Monto</label>
+                <input type="number" id="monto" name="txtmonto" min="0" max="99999999999" step="1" required>
+            </div>
+            <div>
+                <label for="categoria">Categoría</label>
+                <input type="text" id="categoria" name="txtcategoria" maxlength="50" required>
+            </div>
+            <button type="submit">Registrar gasto</button>
+        </form>
+    </main>
+
+    <script>
+        const mensajes = {
+            exito: 'El gasto se guardó correctamente.',
+            datos: 'Revisa los datos: concepto y categoría son obligatorios y el monto debe ser un número entero válido.',
+            error: 'No se pudo guardar el gasto. Revisa la conexión con la base de datos.'
+        };
+        const estado = new URLSearchParams(window.location.search).get('estado');
+        const resultado = document.getElementById('resultado');
+
+        if (estado && mensajes[estado]) {
+            resultado.textContent = mensajes[estado];
+        }
+    </script>
+</body>
+</html>
