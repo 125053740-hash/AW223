@@ -3,7 +3,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 function redirigirEstado($estado)
 {
-    header('Location: index.html?estado=' . $estado, true, 303);
+    header('Location: index.php?estado=' . $estado, true, 303);
     exit();
 }
 
@@ -22,7 +22,6 @@ if (!is_string($concepto) || !is_string($categoria) || !is_string($monto)) {
 $concepto = trim($concepto);
 $categoria = trim($categoria);
 $monto = trim($monto);
-
 
 
 require_once __DIR__ . '/conexion.php';
